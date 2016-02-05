@@ -84,8 +84,17 @@ function makeCounter() {
 
 
 
+function main(func) {
+  function() {
+    func();
+
+  }
+}
 
 
+function anotherFunc() {
+  console.log("AnotherFunc was just run!");
+}
 
 
 
