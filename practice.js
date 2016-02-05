@@ -6,14 +6,18 @@ var outer = function(){
     return 'The original name was ' + name;
   }
 }
-//Above you're given a function that returns another function which has a closure over the name variable.
-//Invoke outer saving the return value into another variable called 'inner'.
+//Above you're given a function that returns another function which has 
+//a closure over the name variable.
+//Invoke outer saving the return value into another variable called 
+//'inner'.
 
-  //Code Here
+  var inner = outer();
 
 //Once you do that, invoke inner.
 
-  //Code Here
+  inner();
+
+  //returns "The original name was Tyler"
 
 
 
@@ -30,9 +34,11 @@ var callFriend = function(){
 };
 
 //Above you're given a callFriend function that returns another function.
-//Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
+//Do what you need to do in order to call your function and get 'Calling 
+//Jake at 435-215-9248' in your console.
 
-  //Code Here
+  var doStuff = callFriend(); //line 30-32 is what this is set to
+  doStuff("435-215-9248");
 
 
 
@@ -41,10 +47,18 @@ var callFriend = function(){
 
 
 /*
-  Write a function called makeCounter that makes the following code work properly.
+  Write a function called makeCounter that makes the following code 
+  work properly.
 */
 
-  //Code Here
+function makeCounter() {
+  var number = 0;
+  return function() {
+    return ++number;
+  }
+}
+
+
   var count = makeCounter();
   count() // 1
   count() // 2
@@ -58,11 +72,25 @@ var callFriend = function(){
 
 
 /*
-  Write a function that accepts another function as it's first argument and returns a new function
-  (which invokes the original function that was passed in) that can only ever be executed once.
-  Once completed, add a second argument that allows the function to be invoked N number of times.
-  After the function has been called N number of times, console.log('STAHHP');
+  Write a function that accepts another function as it's first argument 
+  and returns a new function
+  (which invokes the original function that was passed in) that can 
+  only ever be executed once.
+  Once completed, add a second argument that allows the function to be 
+  invoked N number of times.
+  After the function has been called N number of times, 
+  console.log('STAHHP');
 */
+
+
+
+
+
+
+
+
+
+
 
 
 
