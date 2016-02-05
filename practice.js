@@ -85,18 +85,26 @@ function makeCounter() {
 
 
 function main(func) {
-  function() {
-    func();
-
-  }
+  var hasRan = false;
+  return function() {
+    if (hasRan === false) {
+      hasRan = true;
+      func();
+    }
+    else {
+      console.log("STAHHP");
+    }
+  };
 }
 
 
-function anotherFunc() {
-  console.log("AnotherFunc was just run!");
+function logHello() {
+  console.log("Hello");
 }
 
+var test = main(logHello);
 
+test();
 
 
 
